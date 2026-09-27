@@ -67,11 +67,11 @@ createOrder.mutate({ body: { product_id: product.id } })
 ```
 
 После изменения API на бэкенде клиент перегенерируется одной командой. По умолчанию схема
-берётся из `openapi.json` в ветке `main` репозитория бэкенда:
+берётся из соседней папки `../market_fastapi/openapi.json`, бэкенд запускать не нужно:
 
 ```bash
 npm run generate:api
-OPENAPI_URL=../market_fastapi/openapi.json npm run generate:api   # из локальной копии
+OPENAPI_URL=http://localhost:8000/openapi.json npm run generate:api   # из запущенного сервера
 ```
 
 Генератору нужен TypeScript 5 или 6: с TypeScript 7 `@hey-api/openapi-ts` пока не работает.
