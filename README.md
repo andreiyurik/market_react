@@ -15,9 +15,32 @@ same time, only one of them can reserve it.
 **Stack:** React 19, TypeScript, Vite, Tailwind CSS, [shadcn/ui](https://ui.shadcn.com),
 TanStack Query, [Hey API](https://heyapi.dev) (client generated from OpenAPI).
 
-## Getting started
+## Quick demo (Docker only)
 
-Requires Node.js 24+, Docker and `make`. Clone both repositories side by side:
+One command starts PostgreSQL, the API and the frontend, and loads 16 demo products:
+
+```bash
+git clone https://github.com/andreiyurik/market_react
+cd market_react
+docker compose up --build
+```
+
+- App: http://localhost:5173
+- Swagger: http://localhost:8000/docs
+- OpenAPI: http://localhost:8000/openapi.json
+
+The API image is built straight from the [market_fastapi](https://github.com/andreiyurik/market_fastapi)
+repository on GitHub, so nothing else needs to be cloned or installed. Demo data is reset on
+every start. If ports are taken, pick others: `WEB_PORT=8080 API_PORT=8001 docker compose up --build`.
+Stop with `docker compose down`.
+
+To test against a local backend checkout instead of GitHub:
+`API_CONTEXT=../market_fastapi docker compose up --build`.
+
+## Development setup
+
+For working on the code with hot reload. Requires Node.js 24+, Docker and `make`. Clone both
+repositories side by side:
 
 ```bash
 git clone https://github.com/andreiyurik/market_fastapi
