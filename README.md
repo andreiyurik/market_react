@@ -1,7 +1,26 @@
 # Resale Market — demo frontend
 
+[![CI](https://github.com/andreiyurik/market_react/actions/workflows/ci.yml/badge.svg)](https://github.com/andreiyurik/market_react/actions/workflows/ci.yml)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?logo=shadcnui&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 React client for [market_fastapi](https://github.com/andreiyurik/market_fastapi), a
 reservation and purchase API where every product exists in a single copy.
+
+<p align="center">
+  <img src="docs/images/storefront.webp" width="860" alt="Resale Market storefront: header with search, categories, promo banners and the product catalog">
+</p>
+
+<p align="center">
+  <img src="docs/images/race.gif" width="860"
+       alt="20 buyers order the same product at once: one reserves it, 19 get 409 Conflict, then the order is paid">
+  <br>
+  <em>"20 покупателей сразу": 20 concurrent orders, exactly one reservation.</em>
+</p>
 
 The layout follows the [resalemarket.ru](https://resalemarket.ru) storefront: a header with
 the catalog button and search, a category row, promo banners and a product grid. No logo,
